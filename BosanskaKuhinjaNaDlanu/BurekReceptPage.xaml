@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BosanskaKuhinjaNaDlanu.BurekReceptPage"
+             Title="Burek Recept">
+
+    <ContentPage.Resources>
+        <!-- Definicija stila za naslov recepta -->
+        <Style x:Key="RecipeTitleStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="36" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="#333333" />
+            <Setter Property="HorizontalOptions" Value="Start" />
+            <Setter Property="FontFamily">
+                <Setter.Value>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android, iOS" Value="DancingScript-Bold" />
+                        <On Platform="WinUI" Value="Assets/DancingScript-Bold.ttf#DancingScript" />
+                    </OnPlatform>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Definicija stila za sliku recepta -->
+        <Style x:Key="RecipeImageStyle" TargetType="Image">
+            <Setter Property="Aspect" Value="AspectFill" />
+            <Setter Property="HeightRequest" Value="300" />
+            <Setter Property="Margin" Value="0,10" />
+            <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        </Style>
+
+        <!-- Definicija stila za ime autora -->
+        <Style x:Key="AuthorNameLabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="#333333" />
+            <Setter Property="Margin" Value="10,0" />
+            <Setter Property="VerticalOptions" Value="Center" />
+        </Style>
+
+        <!-- Definicija stila za sliku autora -->
+        <Style x:Key="AuthorImageStyle" TargetType="Image">
+            <Setter Property="HeightRequest" Value="50" />
+            <Setter Property="WidthRequest" Value="50" />
+            <Setter Property="Aspect" Value="AspectFill" />
+            <Setter Property="Margin" Value="0,10" />
+            <Setter Property="HorizontalOptions" Value="Start" />
+        </Style>
+
+        <!-- Definicija stila za ocjenu sa zvjezdicama -->
+        <Style x:Key="RatingLabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="TextColor" Value="#FFD700" />
+            <Setter Property="VerticalOptions" Value="Center" />
+        </Style>
+
+        <!-- Stil za sastojke -->
+        <Style x:Key="IngredientButtonStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#EFEFEF" />
+            <Setter Property="TextColor" Value="#333333" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="Padding" Value="10,5" />
+            <Setter Property="Margin" Value="0,5,0,0" />
+            <Setter Property="CornerRadius" Value="5" />
+        </Style>
+
+        <!-- Definicija stila za recept -->
+        <Style x:Key="RecipeLabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="TextColor" Value="#555555" />
+            <Setter Property="LineHeight" Value="1.5" />
+        </Style>
+
+        <!-- Definicija stila za ime korisnika u komentarima -->
+        <Style x:Key="CommentUserNameStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="#333333" />
+            <Setter Property="Margin" Value="10,0" />
+            <Setter Property="VerticalOptions" Value="Center" />
+        </Style>
+
+        <!-- Definicija stila za sliku korisnika u komentarima -->
+        <Style x:Key="CommentUserImageStyle" TargetType="Image">
+            <Setter Property="HeightRequest" Value="40" />
+            <Setter Property="WidthRequest" Value="40" />
+            <Setter Property="Aspect" Value="AspectFill" />
+            <Setter Property="Margin" Value="0,10" />
+            <Setter Property="HorizontalOptions" Value="Start" />
+        </Style>
+
+        <!-- Definicija stila za komentar korisnika -->
+        <Style x:Key="CommentTextStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="TextColor" Value="#555555" />
+            <Setter Property="LineHeight" Value="1.4" />
+            <Setter Property="Margin" Value="10,5,10,10" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView VerticalOptions="FillAndExpand">
+        <StackLayout Padding="20" Spacing="20">
+            <!-- Naslov recepta u elegantnom pisano fontu -->
+            <Label Text="Burek" Style="{StaticResource RecipeTitleStyle}" />
+
+            <!-- Slika bureka -->
+            <Image Source="burek.jpg" Style="{StaticResource RecipeImageStyle}" />
+
+            <!-- Ime autora i slika ispod slike bureka -->
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <Image Source="korisnik1.png" Style="{StaticResource AuthorImageStyle}" />
+                <Label Text="Aida Hot" Style="{StaticResource AuthorNameLabelStyle}" />
+            </StackLayout>
+
+            <!-- Ocjena sa zvjezdicama -->
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <Label Text="★ ★ ★ ★ ☆" Style="{StaticResource RatingLabelStyle}" />
+                <Label Text="4/5" Style="{StaticResource RatingLabelStyle}" Margin="10,0" />
+            </StackLayout>
+
+
+            <!-- Sastojci za pretragu -->
+            <Frame CornerRadius="10" HasShadow="True">
+                <StackLayout Padding="10">
+                    <Label Text="Osnovni sastojci:" FontSize="24" FontAttributes="Bold" Margin="0,10,0,5" />
+                    <StackLayout Margin="0,5,0,0">
+                        <Button Text="500g tankih kora za burek" Style="{StaticResource IngredientButtonStyle}" />
+                        <Button Text="500g mljevenog mesa" Style="{StaticResource IngredientButtonStyle}" />
+                        <Button Text="1 glavica luka" Style="{StaticResource IngredientButtonStyle}" />
+                        <Button Text="So, biber" Style="{StaticResource IngredientButtonStyle}" />
+                        <Button Text="Ulje ili maslac" Style="{StaticResource IngredientButtonStyle}" />
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <!-- Skrolabilni prikaz recepta -->
+            <Frame CornerRadius="10" HasShadow="True">
+                <StackLayout Padding="10">
+                    <Label Text="Recept za burek:" FontSize="24" FontAttributes="Bold" Margin="0,10,0,5" />
+                    <Label Text="Priprema:" FontAttributes="Bold" Style="{StaticResource RecipeLabelStyle}" Margin="0,10,0,5" />
+                    <Label Text="1. Luk sitno iseckati i propržiti na ulju dok ne postane staklast." Style="{StaticResource RecipeLabelStyle}" Margin="0,5,0,0" />
+                    <Label Text="2. Dodati mljeveno meso, posoliti i pobiberiti po ukusu te dinstati dok meso ne postane sasvim pečeno." Style="{StaticResource RecipeLabelStyle}" Margin="0,5,0,0" />
+                    <Label Text="3. Pripremljenu smjesu ostaviti da se ohladi." Style="{StaticResource RecipeLabelStyle}" Margin="0,5,0,0" />
+                    <Label Text="4. Uzimati po jednu koru, premazivati je uljem ili rastopljenim maslacem, slagati ih jednu na drugu, poslije svake kore stavljati po malo pripremljene smjese sa mesom i luka." Style="{StaticResource RecipeLabelStyle}" Margin="0,5,0,0" />
+                    <Label Text="5. Rolati uzduž strane i motati rolnu, staviti je u podmazani pleh i peći u zagrijanoj rerni na 200 stepeni oko 40 minuta." Style="{StaticResource RecipeLabelStyle}" Margin="0,5,0,0" />
+                    <Label Text="6. Pečeni burek pokriti krpom i ostaviti da se prohladi." Style="{StaticResource RecipeLabelStyle}" Margin="0,5,0,0" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Komentari korisnika -->
+            <Frame CornerRadius="10" HasShadow="True">
+                <StackLayout Padding="10">
+                    <Label Text="Komentari:" FontSize="24" FontAttributes="Bold" Margin="0,10,0,5" />
+                    <!-- Komentari će se dodavati ovdje -->
+                    <StackLayout x:Name="CommentsStackLayout">
+                        <!-- Initial comments can go here -->
+                    </StackLayout>
+                    <!-- Entry za novi komentar -->
+                    <Entry x:Name="NewCommentEntry" Placeholder="Napišite vaš komentar..." />
+                    <!-- Dugme za dodavanje komentara -->
+                    <Button Text="Dodaj komentar" Clicked="OnAddCommentButtonClicked" BackgroundColor="#FFA500" TextColor="White"/>
+                    <!-- Picker za ocenjivanje -->
+                    <Picker x:Name="RatingPicker" Title="Ocijenite recept" Margin="0,10">
+                        <Picker.Items>
+                            <x:String>1</x:String>
+                            <x:String>2</x:String>
+                            <x:String>3</x:String>
+                            <x:String>4</x:String>
+                            <x:String>5</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <!-- Dugme za slanje ocene -->
+                    <Button Text="Pošalji ocjenu" Clicked="OnRateButtonClicked" BackgroundColor="#FFA500" TextColor="White"/>
+
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
+

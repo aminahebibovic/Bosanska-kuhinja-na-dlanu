@@ -1,0 +1,107 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net7.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = BosanskaKuhinjaNaDlanu
+build_property.ProjectDir = C:\Users\Korisnik\Desktop\BosanskaKuhinjaNaDlanu\BosanskaKuhinjaNaDlanu\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[C:/Users/Korisnik/Desktop/BosanskaKuhinjaNaDlanu/BosanskaKuhinjaNaDlanu/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BosanskaKuhinjaNaDlanu.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/Korisnik/Desktop/BosanskaKuhinjaNaDlanu/BosanskaKuhinjaNaDlanu/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BosanskaKuhinjaNaDlanu.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/Korisnik/Desktop/BosanskaKuhinjaNaDlanu/BosanskaKuhinjaNaDlanu/BaklavaReceptPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BosanskaKuhinjaNaDlanu.BaklavaReceptPage.xaml
+build_metadata.AdditionalFiles.TargetPath = BaklavaReceptPage.xaml
+build_metadata.AdditionalFiles.RelativePath = BaklavaReceptPage.xaml
+
+[C:/Users/Korisnik/Desktop/BosanskaKuhinjaNaDlanu/BosanskaKuhinjaNaDlanu/BegovaCorbaReceptPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BosanskaKuhinjaNaDlanu.BegovaCorbaReceptPage.xaml
+build_metadata.AdditionalFiles.TargetPath = BegovaCorbaReceptPage.xaml
+build_metadata.AdditionalFiles.RelativePath = BegovaCorbaReceptPage.xaml
+
+[C:/Users/Korisnik/Desktop/BosanskaKuhinjaNaDlanu/BosanskaKuhinjaNaDlanu/BurekReceptPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BosanskaKuhinjaNaDlanu.BurekReceptPage.xaml
+build_metadata.AdditionalFiles.TargetPath = BurekReceptPage.xaml
+build_metadata.AdditionalFiles.RelativePath = BurekReceptPage.xaml
+
+[C:/Users/Korisnik/Desktop/BosanskaKuhinjaNaDlanu/BosanskaKuhinjaNaDlanu/CevapiReceptPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BosanskaKuhinjaNaDlanu.CevapiReceptPage.xaml
+build_metadata.AdditionalFiles.TargetPath = CevapiReceptPage.xaml
+build_metadata.AdditionalFiles.RelativePath = CevapiReceptPage.xaml
+
+[C:/Users/Korisnik/Desktop/BosanskaKuhinjaNaDlanu/BosanskaKuhinjaNaDlanu/FavoritesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BosanskaKuhinjaNaDlanu.FavoritesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = FavoritesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = FavoritesPage.xaml
+
+[C:/Users/Korisnik/Desktop/BosanskaKuhinjaNaDlanu/BosanskaKuhinjaNaDlanu/GrahReceptPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BosanskaKuhinjaNaDlanu.GrahReceptPage.xaml
+build_metadata.AdditionalFiles.TargetPath = GrahReceptPage.xaml
+build_metadata.AdditionalFiles.RelativePath = GrahReceptPage.xaml
+
+[C:/Users/Korisnik/Desktop/BosanskaKuhinjaNaDlanu/BosanskaKuhinjaNaDlanu/HurmasiceReceptPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BosanskaKuhinjaNaDlanu.HurmasiceReceptPage.xaml
+build_metadata.AdditionalFiles.TargetPath = HurmasiceReceptPage.xaml
+build_metadata.AdditionalFiles.RelativePath = HurmasiceReceptPage.xaml
+
+[C:/Users/Korisnik/Desktop/BosanskaKuhinjaNaDlanu/BosanskaKuhinjaNaDlanu/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BosanskaKuhinjaNaDlanu.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/Korisnik/Desktop/BosanskaKuhinjaNaDlanu/BosanskaKuhinjaNaDlanu/MyRecipesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BosanskaKuhinjaNaDlanu.MyRecipesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MyRecipesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MyRecipesPage.xaml
+
+[C:/Users/Korisnik/Desktop/BosanskaKuhinjaNaDlanu/BosanskaKuhinjaNaDlanu/ReceptiPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BosanskaKuhinjaNaDlanu.ReceptiPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ReceptiPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ReceptiPage.xaml
+
+[C:/Users/Korisnik/Desktop/BosanskaKuhinjaNaDlanu/BosanskaKuhinjaNaDlanu/RecipePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BosanskaKuhinjaNaDlanu.RecipePage.xaml
+build_metadata.AdditionalFiles.TargetPath = RecipePage.xaml
+build_metadata.AdditionalFiles.RelativePath = RecipePage.xaml
+
+[C:/Users/Korisnik/Desktop/BosanskaKuhinjaNaDlanu/BosanskaKuhinjaNaDlanu/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BosanskaKuhinjaNaDlanu.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/Korisnik/Desktop/BosanskaKuhinjaNaDlanu/BosanskaKuhinjaNaDlanu/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BosanskaKuhinjaNaDlanu.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml

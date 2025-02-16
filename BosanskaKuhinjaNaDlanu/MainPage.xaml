@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BosanskaKuhinjaNaDlanu.MainPage">
+    <ContentPage.Resources>
+        <Color x:Key="OrangeColor">#EFAB3D</Color>
+        <Color x:Key="BackgroundColor">#F6F6F6</Color>
+        <Color x:Key="DarkTextColor">#333333</Color>
+
+        <Style TargetType="Button" x:Key="YellowButtonStyle">
+            <Setter Property="BackgroundColor" Value="{StaticResource OrangeColor}" />
+            <Setter Property="TextColor" Value="{StaticResource DarkTextColor}" />
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="CornerRadius" Value="50" />
+            <Setter Property="Padding" Value="16, 8" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="TitleLabelStyle">
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="{StaticResource DarkTextColor}" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            <Setter Property="Margin" Value="0,-50,0,30" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="DescriptionLabelStyle">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="TextColor" Value="{StaticResource DarkTextColor}" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            <Setter Property="Margin" Value="18,-100,18,100" />
+        </Style>
+
+        <!-- Style for the first image (naslovna.png) -->
+        <Style TargetType="Image" x:Key="HeaderImageStyle1">
+            <Setter Property="Aspect" Value="AspectFill" />
+            <Setter Property="HeightRequest" Value="300" />
+            <Setter Property="VerticalOptions" Value="Start" />
+            <Setter Property="Margin" Value="0,-30,0,0" />
+        </Style>
+
+        <!-- Style for the second image (hrana.jpg) -->
+        <Style TargetType="Image" x:Key="HeaderImageStyle2">
+            <Setter Property="Aspect" Value="AspectFill" />
+            <Setter Property="HeightRequest" Value="300" />
+            <Setter Property="VerticalOptions" Value="Start" />
+            <Setter Property="Margin" Value="0,-130,0,0" />
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout BackgroundColor="{StaticResource BackgroundColor}" Padding="15,30,15,0" Spacing="0">
+        <!-- Header Section: Images -->
+        <Image Style="{StaticResource HeaderImageStyle1}" Source="slikalogo.png" />
+
+        <!-- Description Label -->
+        <Label Style="{StaticResource DescriptionLabelStyle}"
+               Text="Otkrijte tradicionalne bosanske recepte na svojim pametnim telefonima i jednostavno pripremite bogata aromatična jela korak po korak." />
+
+        <!-- Second Image -->
+        <Image Style="{StaticResource HeaderImageStyle2}" Source="hrana.jpg" />
+
+        <!-- Counter Button Section -->
+        <Button x:Name="CounterBtn"
+                Text="Pogledaj više ->"
+                Clicked="OnCounterClicked"
+                Style="{StaticResource YellowButtonStyle}" 
+                Margin="97,-150,97,150"/>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,123 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
+		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
+		<!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
+		<OutputType>Exe</OutputType>
+		<RootNamespace>BosanskaKuhinjaNaDlanu</RootNamespace>
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<!-- Display name -->
+		<ApplicationTitle>BosanskaKuhinjaNaDlanu</ApplicationTitle>
+
+		<!-- App Identifier -->
+		<ApplicationId>com.companyname.bosanskakuhinjanadlanu</ApplicationId>
+		<ApplicationIdGuid>a2c78fbf-7c91-400c-88dc-951f70d80cd7</ApplicationIdGuid>
+
+		<!-- Versions -->
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationVersion>1</ApplicationVersion>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">13.1</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- App Icon -->
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+
+		<!-- Splash Screen -->
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+
+		<!-- Custom Fonts -->
+		<MauiFont Include="Resources\Fonts\*" />
+
+		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\baklava.jpg" />
+	  <MauiImage Remove="Resources\Images\burek.jpg" />
+	  <MauiImage Remove="Resources\Images\cevapi.jpg" />
+	  <MauiImage Remove="Resources\Images\dotnet_bot.svg" />
+	  <MauiImage Remove="Resources\Images\favorite_icon.png" />
+	  <MauiImage Remove="Resources\Images\favorite_icon_selected.png" />
+	  <MauiImage Remove="Resources\Images\grah.jpg" />
+	  <MauiImage Remove="Resources\Images\hrana.jpeg" />
+	  <MauiImage Remove="Resources\Images\hurmasice.jpg" />
+	  <MauiImage Remove="Resources\Images\korisnik1.jpg" />
+	  <MauiImage Remove="Resources\Images\noimg.png" />
+	  <MauiImage Remove="Resources\Images\zena.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <AndroidAotProfile Include="Resources\Images\noimg.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MultiDexMainDexList Include="Resources\Images\baklava.jpg" />
+	  <Content Include="Resources\Images\burek.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Resources\Images\cevapi.jpg" />
+	  <Content Include="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
+	  <Content Include="Resources\Images\favorite_icon.png" />
+	  <Content Include="Resources\Images\favorite_icon_selected.png" />
+	  <Content Include="Resources\Images\grah.jpg" />
+	  <Content Include="Resources\Images\hrana.jpeg" />
+	  <Content Include="Resources\Images\hurmasice.jpg" />
+	  <Content Include="Resources\Images\korisnik1.jpg" />
+	  <Content Include="Resources\Images\zena.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="BaklavaReceptPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="BegovaCorbaReceptPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="BurekReceptPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="CevapiReceptPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="FavoritesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="GrahReceptPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="HurmasiceReceptPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MyRecipesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ReceptiPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="RecipePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+</Project>

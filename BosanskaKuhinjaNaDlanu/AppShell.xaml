@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="BosanskaKuhinjaNaDlanu.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:BosanskaKuhinjaNaDlanu"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <ShellContent
+            Title="Početna"
+            Icon="home.png"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+
+        <ShellContent
+            Title="Omiljeno"
+            Icon="favorites.png"
+            ContentTemplate="{DataTemplate local:FavoritesPage}"
+            Route="FavoritesPage" />
+
+        <ShellContent
+            Title="Recepti"
+            Icon="recipes.png"
+            ContentTemplate="{DataTemplate local:ReceptiPage}"
+            Route="ReceptiPage" />
+
+        <ShellContent
+            Title="Moji Recepti"
+            Icon="myrecipes.png"
+            ContentTemplate="{DataTemplate local:MyRecipesPage}"
+            Route="MyRecipesPage" />
+    </TabBar>
+</Shell>

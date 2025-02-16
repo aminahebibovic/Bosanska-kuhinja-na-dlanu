@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BosanskaKuhinjaNaDlanu.RecipePage"
+             Title="Dodavanje Recepta">
+    <StackLayout Padding="20" BackgroundColor="#FFFFFF">
+        <Frame Padding="10" CornerRadius="10" BackgroundColor="#F6F6F6">
+            <StackLayout>
+                <Label Text="Naziv recepta" FontAttributes="Bold" FontSize="Medium" TextColor="#333333" />
+                <Entry x:Name="RecipeNameEntry" Placeholder="Unesite naziv recepta" BackgroundColor="#FFFFFF" TextColor="#333333" />
+            </StackLayout>
+        </Frame>
+
+        <Frame Padding="10" CornerRadius="10" BackgroundColor="#F6F6F6" Margin="0,10,0,0">
+            <StackLayout>
+                <Label Text="Putanja do slike" FontAttributes="Bold" FontSize="Medium" TextColor="#333333" />
+                <Entry x:Name="RecipeImageEntry" Placeholder="Unesite putanju do slike" BackgroundColor="#FFFFFF" TextColor="#333333" />
+            </StackLayout>
+        </Frame>
+
+        <Frame Padding="10" CornerRadius="10" BackgroundColor="#F6F6F6" Margin="0,10,0,0">
+            <StackLayout>
+                <Label Text="Opis recepta" FontAttributes="Bold" FontSize="Medium" TextColor="#333333" />
+                <Editor x:Name="RecipeDescriptionEditor" Placeholder="Unesite opis recepta" HeightRequest="150" BackgroundColor="#FFFFFF" TextColor="#333333" />
+            </StackLayout>
+        </Frame>
+
+        <Button Text="Dodaj recept" Clicked="OnAddRecipeButtonClicked" BackgroundColor="#EFAB3D" TextColor="#FFFFFF" CornerRadius="10" Margin="0,20,0,0" />
+    </StackLayout>
+</ContentPage>

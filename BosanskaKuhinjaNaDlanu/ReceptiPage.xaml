@@ -1,0 +1,152 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BosanskaKuhinjaNaDlanu.ReceptiPage">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label" x:Key="ItemLabelStyle">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="TextColor" Value="#333333" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="VerticalOptions" Value="Start" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="ItemLinkStyle">
+            <Setter Property="TextColor" Value="#EFAB3D" />
+            <Setter Property="TextDecorations" Value="Underline" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="HorizontalOptions" Value="End" />
+            <Setter Property="VerticalOptions" Value="Center" />
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout Padding="10" BackgroundColor="#F6F6F6">
+
+        <!-- Search and Menu Section -->
+        <StackLayout Orientation="Horizontal" Padding="0,20,0,10" Spacing="10">
+            <SearchBar x:Name="RecipeSearchBar" Placeholder="Pretraži recepte" HorizontalOptions="FillAndExpand" TextChanged="OnSearchBarTextChanged"/>
+        </StackLayout>
+
+        <!-- Recipe Items Section -->
+        <Grid x:Name="RecipeGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <!-- Example Item 1: Burek -->
+            <StackLayout x:Name="BurekItem" Grid.Row="0" Grid.Column="0" Padding="10">
+                <Image Source="burek.jpg" Aspect="AspectFill" HeightRequest="125"/>
+                <Label Text="Burek" Style="{StaticResource ItemLabelStyle}"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <ImageButton Source="favorite_icon.png" HeightRequest="20" WidthRequest="20" Margin="5,0,0,5" Grid.Column="0" Clicked="OnFavoriteIconClicked"/>
+                    <Label Text="Vidi recept" Style="{StaticResource ItemLinkStyle}" Grid.Column="1">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="HandleBurekTap" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+            </StackLayout>
+
+            <!-- Example Item 2: Ćevapi -->
+            <StackLayout x:Name="CevapiItem" Grid.Row="0" Grid.Column="1" Padding="10">
+                <Image Source="cevapi.jpg" Aspect="AspectFill" HeightRequest="125"/>
+                <Label Text="Ćevapi" Style="{StaticResource ItemLabelStyle}"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <ImageButton Source="favorite_icon.png" HeightRequest="20" WidthRequest="20" Margin="5,0,0,5" Grid.Column="0" Clicked="OnFavoriteIconClicked"/>
+                    <Label Text="Vidi recept" Style="{StaticResource ItemLinkStyle}" Grid.Column="1">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="HandleCevapiTap" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+            </StackLayout>
+
+            <!-- Example Item 3: Baklava -->
+            <StackLayout x:Name="BaklavaItem" Grid.Row="1" Grid.Column="0" Padding="10">
+                <Image Source="baklava.jpg" Aspect="AspectFill" HeightRequest="125"/>
+                <Label Text="Baklava" Style="{StaticResource ItemLabelStyle}"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <ImageButton Source="favorite_icon.png" HeightRequest="20" WidthRequest="20" Margin="5,0,0,5" Grid.Column="0" Clicked="OnFavoriteIconClicked"/>
+                    <Label Text="Vidi recept" Style="{StaticResource ItemLinkStyle}" Grid.Column="1">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="HandleBaklavaTap" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+            </StackLayout>
+
+            <!-- Example Item 4: Hurmašice -->
+            <StackLayout x:Name="HurmasiceItem" Grid.Row="1" Grid.Column="1" Padding="10">
+                <Image Source="hurmasice.jpg" Aspect="AspectFill" HeightRequest="125"/>
+                <Label Text="Hurmašice" Style="{StaticResource ItemLabelStyle}"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <ImageButton Source="favorite_icon.png" HeightRequest="20" WidthRequest="20" Margin="5,0,0,5" Grid.Column="0" Clicked="OnFavoriteIconClicked"/>
+                    <Label Text="Vidi recept" Style="{StaticResource ItemLinkStyle}" Grid.Column="1">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="HandleHurmasiceTap" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+            </StackLayout>
+
+            <!-- Example Item 5: Begova Čorba -->
+            <StackLayout x:Name="BegovaCorbaItem" Grid.Row="2" Grid.Column="0" Padding="10">
+                <Image Source="begovacorba.jpg" Aspect="AspectFill" HeightRequest="125"/>
+                <Label Text="Begova Čorba" Style="{StaticResource ItemLabelStyle}"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <ImageButton Source="favorite_icon.png" HeightRequest="20" WidthRequest="20" Margin="5,0,0,5" Grid.Column="0" Clicked="OnFavoriteIconClicked"/>
+                    <Label Text="Vidi recept" Style="{StaticResource ItemLinkStyle}" Grid.Column="1">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="HandleBegovaCorbaTap" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+            </StackLayout>
+
+            <!-- Example Item 6: Grah -->
+            <StackLayout x:Name="GrahItem" Grid.Row="2" Grid.Column="1" Padding="10">
+                <Image Source="grah.jpg" Aspect="AspectFill" HeightRequest="125"/>
+                <Label Text="Grah" Style="{StaticResource ItemLabelStyle}"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <ImageButton Source="favorite_icon.png" HeightRequest="20" WidthRequest="20" Margin="5,0,0,5" Grid.Column="0" Clicked="OnFavoriteIconClicked"/>
+                    <Label Text="Vidi recept" Style="{StaticResource ItemLinkStyle}" Grid.Column="1">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="HandleGrahTap" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+            </StackLayout>
+
+        </Grid>
+    </StackLayout>
+</ContentPage>
